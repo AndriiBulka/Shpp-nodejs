@@ -1,0 +1,123 @@
+/** @format */
+/* body {
+  background-color: rgba(131, 129, 129);
+  opacity: 0.7;
+} */
+html {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+body {
+  padding: 50px;
+  height: auto;
+  min-height: 100%;
+  position: static;
+}
+#skroll-up-btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  background-color: rgb(117, 117, 117);
+  color: white;
+  padding: 15px;
+  border-radius: 4px;
+  /* display: none; */
+}
+.vertical {
+  margin-top: 10px;
+  display: block;
+}
+.boxes-container {
+  margin: 30px;
+  /* float: left */
+}
+#blackboxes div {
+  display: inline-flex;
+}
+.hidden {
+  visibility: hidden;
+}
+
+.blackbox {
+  margin: 2px;
+  display: block;
+  background-color: black;
+  width: 100px;
+  height: 100px;
+}
+.inline {
+  float: left;
+}
+.editing-box {
+  margin: 2px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+#redbox {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(255, 0, 0);
+}
+#yellowbox {
+  width: 50px;
+  height: 50px;
+  background-color: yellow;
+}
+#greenbox {
+  width: 50px;
+  height: 20px;
+  background-color: green;
+}
+#top-left-block {
+  border: 1px solid black;
+  position: fixed;
+  top: 1%;
+  left: 85%;
+}
+#body-grey-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128);
+  opacity: 0.35;
+}
+#drag-and-drop {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+#drag-and-drop-box {
+  display: flex;
+  padding: 10px;
+
+  width: 300px;
+  height: 150px;
+}
+.upload-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2em;
+  border: 2px dashed rgb(134, 133, 133);
+  width: 100%;
+  height: 100%;
+}
+.dragzone {
+  padding: 20px;
+  cursor: pointer;
+  color: darkgreen;
+  border: 4px dashed rgb(0, 179, 6);
+  background-color: rgba(131, 255, 146, 0.925);
+  transform: scale(1.1);
+}
+.material-symbols-outlined {
+  font-size: 54px;
+}

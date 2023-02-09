@@ -1,0 +1,249 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <title>1.4-intro-frontend-js</title>
+  </head>
+  <body>
+    <!-- TASK 1 -->
+    <div class="boxes-container">
+      <h1>Task 1</h1>
+      <div id="blackbox" class="blackbox"></div>
+      <button class="vertical" onclick="getElementById('blackbox').style.display = 'none'">CSS</button>
+      <button class="vertical" onclick="removeElement('blackbox')">CSS+JS</button>
+      <button class="vertical" onclick="hiddenElement('blackbox')">JS hidden</button>
+      <button class="vertical" onclick="switchHiddenElement('blackbox')">JS switch hidden</button>
+      <!-- TASK 2 -->
+    </div>
+    <div class="boxes-container">
+      <h1>Task 2</h1>
+      <div id="blackbox2" class="blackbox"></div>
+      <button class="vertical" onclick="switchHiddenElement('blackbox2')">JS switch hidden</button>
+    </div>
+    <!-- TASK 3-->
+    <div id="blackboxes" class="boxes-container">
+      <h1>Task 3</h1>
+      <div id="blackbox4" class="blackbox inline"></div>
+      <div id="blackbox5" class="blackbox inline"></div>
+      <div id="blackbox6" class="blackbox inline"></div>
+      <div id="blackbox7" class="blackbox inline"></div>
+      <div id="blackbox8" class="blackbox"></div>
+      <button class="vertical" onclick="hiddenElements('blackbox4','blackbox5','blackbox6','blackbox7','blackbox8')">JS switch hidden</button>
+    </div>
+    <!-- TASK 4 -->
+    <div class="boxes-container">
+      <h1>Task 4</h1>
+      <input type="text" id="inputSelector" name="selector" placeholder="selector" />
+      <button class="vertical" onclick="hiddenBySelector(document.getElementById('inputSelector').value)">Swich hidden by selector</button>
+    </div>
+    <!-- TASK 5 -->
+    <div class="boxes-container">
+      <h1>Task 5</h1>
+      <div id="yellowbox" onclick="yellowBox('yellowbox')"></div>
+    </div>
+    <!-- TASK 6 -->
+    <div class="boxes-container">
+      <h1>Task 6</h1>
+      <div id="redbox" onmouseover="showRedBox('redbox')" onmouseout="hideRedBox('redbox')"></div>
+    </div>
+    <!-- TASK 7 -->
+    <div class="boxes-container">
+      <h1>Task 7</h1>
+      <div id="greenbox" class="hidden"></div>
+      <input type="text" id="ginput" name="ginput" onfocus="showGreenRect('greenbox')" oninput="hideGreenRect('greenbox')" />
+    </div>
+    <!-- TASK 8 -->
+    <div id="image" class="boxes-container">
+      <h1>Task 8</h1>
+      <input type="url" id="url" name="url" placeholder="https:/picsum.photos/200" value="https:/picsum.photos/200" />
+      <button class="vertical" onclick="addImageByUrl('image', document.getElementById('url').value)">Add image by url</button>
+    </div>
+    <!-- TASK 9 -->
+    <div id="images" class="boxes-container">
+      <h1>Task 9</h1>
+      <textarea name="image-urls" id="image-urls" cols="30" rows="10" placeholder="https:/picsum.photos/200"></textarea>
+      <button class="vertical" onclick="addImagesByUrl('images', document.getElementById('image-urls').value)">Add images by url</button>
+    </div>
+    <!-- TASK 10, 11, 12 -->
+    <div id="top-left-block">
+      <h1>Task 10-11-12</h1>
+      <p id="coursor-coord">Х: 123, У: 984</p>
+      <p id="language">Language:</p>
+      <p id="devise-coord"></p>
+    </div>
+    <!-- Task 13 -->
+    <div id="blackboxes" class="boxes-container">
+      <h1>Task 13</h1>
+      <div id="editbox1" class="editing-box inline" contenteditable="true" onblur="saveTolocalStorage('editbox1')"></div>
+      <div id="editbox2" class="editing-box inline" contenteditable="true" onblur="saveCookies('editbox2')"></div>
+      <div id="editbox3" class="editing-box" contenteditable="true" onblur="saveToSessionStorage('editbox3')"></div>
+    </div>
+    <!-- Task 14 -->
+    <!-- <div class="boxes-container"> -->
+    <button id="skroll-up-btn" onclick="scrollUp('')">Task 14(skroll up)</button>
+    <!-- </div> -->
+
+    <!-- Task 15 -->
+    <div class="boxes-container">
+      <h1>Task 15</h1>
+      <div id="outer" style="background-color: rgb(0, 0, 0); width: 100px; height: 100px">
+        <div id="inner" style="background-color: rgb(80, 100, 255); width: 50px; height: 50px"></div>
+      </div>
+    </div>
+    <!-- Task 16 -->
+    <div class="boxes-container">
+      <h1>Task 16</h1>
+      <button id="greybox-btn" onclick="switchHiddenElement('body-grey-box'); document.body.style.overflow ='hidden';document.body.style.filter = 'blur(8px)'">Task 16</button>
+      <div id="body-grey-box" class="hidden" onclick="switchHiddenElement('body-grey-box'); document.body.style.overflow = ''; document.body.style.filter = 'none'"></div>
+    </div>
+    <!-- Task 17 -->
+    <div class="boxes-container">
+      <h1>Task 17</h1>
+      <form onclick="return false">
+        <input type="submit" value="GO" />
+      </form>
+    </div>
+    <!-- Task 18 -->
+    <div class="boxes-container">
+      <h1>Task 18</h1>
+
+      <div id="drag-and-drop-box">
+        <input type="file" id="upload" style="display: none" />
+        <label for="upload" id="upload-label" class="upload-label" onblur="changeDropZone()" onmouseenter="changeDropZone(event)" onmouseleave="changeDropZone(event)" ondragenter="changeDropZone(event)" ondragleave="changeDropZone(event)">
+          <i class="material-symbols-outlined" style="font-size: 64px"> system_update_alt </i>
+          <p>Click or Drop to Upload File</p>
+        </label>
+      </div>
+    </div>
+    <script>
+      function removeElement(id) {
+        document.getElementById(id).remove();
+      }
+      function hiddenElement(id) {
+        document.getElementById(id).classList.add("hidden");
+      }
+      function switchHiddenElement(id) {
+        document.getElementById(id).classList.toggle("hidden");
+      }
+      function hiddenElements(...arr) {
+        arr.map(el => switchHiddenElement(el));
+      }
+      function hiddenBySelector(selector) {
+        Array.from(document.querySelectorAll(selector)).map(el => el.classList.toggle("hidden"));
+      }
+      function yellowBox(id) {
+        alert("Hey there!");
+        const element = document.getElementById(id);
+        element.onclick = () => element.classList.toggle("hidden");
+      }
+      function showRedBox(id) {
+        document.getElementById(id).style.opacity = "1";
+      }
+      function hideRedBox(id) {
+        document.getElementById(id).style.opacity = "0";
+      }
+
+      function showGreenRect(id) {
+        document.getElementById(id).style.visibility = "visible";
+      }
+      function hideGreenRect(id) {
+        document.getElementById(id).style.visibility = "hidden";
+      }
+      function addImageByUrl(id, url) {
+        document.getElementById(id).append(newImgTagFrom(url));
+      }
+
+      function addImagesByUrl(id, url) {
+        const urls = url.split("\n");
+        console.log(urls);
+        const elements = document.getElementById(id);
+        urls.map(url => elements.append(newImgTagFrom(url)));
+      }
+
+      function newImgTagFrom(url) {
+        const image = document.createElement("img");
+        image.className = "img-box";
+        image.src = url;
+        return image;
+      }
+
+      onmousemove = event => {
+        document.getElementById("coursor-coord").innerText = `X:${event.clientX}, Y:${event.clientY}`;
+      };
+      onload = () => {};
+      document.getElementById("outer").onclick = () => {
+        alert("outer");
+      };
+      document.getElementById("inner").onclick = event => {
+        alert("inner");
+        event.stopPropagation();
+      };
+      function saveTolocalStorage(id) {
+        const element = document.getElementById(id);
+        localStorage.setItem(id, element.innerText);
+      }
+      function saveCookies(id) {
+        const element = document.getElementById(id);
+        document.cookie = `${id}=${element.innerText};`;
+        console.log(document.cookie);
+
+        console.log(document.cookie);
+      }
+      function saveToSessionStorage(id) {
+        const element = document.getElementById(id);
+        sessionStorage.setItem(id, element.innerText);
+      }
+      onload = () => {
+        document.getElementById("language").innerText = `Language: ${navigator.language}`;
+        const element = document.getElementById("devise-coord");
+        navigator.geolocation.getCurrentPosition(
+          location => {
+            element.innerHTML = `Ш: ${location.coords.latitude} <br> Д: ${location.coords.longitude}`;
+          },
+          err => (element.innerText = err.message)
+        );
+
+        const cookie = document.cookie.split(";").map(c => {
+          let cooki = c.split("=");
+          let key = cooki[0];
+          let value = cooki[1];
+          let element = document.getElementById(key);
+          element.innerText = value;
+        });
+        for (let i = 0; i < localStorage.length; i++) {
+          const key = localStorage.key(i);
+          const value = localStorage.getItem(key);
+          const element = document.getElementById(key);
+          element.innerText = value;
+        }
+        for (let i = 0; i < sessionStorage.length - 1; i++) {
+          const key = sessionStorage.key(i);
+          const value = sessionStorage.getItem(key);
+          const element = document.getElementById(key);
+          element.innerText = value;
+        }
+      };
+      onscroll = () => {
+        if (document.documentElement.scrollTop >= window.innerHeight) {
+          document.getElementById("skroll-up-btn").style.display = "block";
+        } else {
+          document.getElementById("skroll-up-btn").style.display = "none";
+        }
+      };
+      function scrollUp(id) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+      function changeDropZone(event) {
+        event.preventDefault();
+        document.getElementById("upload-label").classList.toggle("dragzone");
+      }
+    </script>
+  </body>
+</html>
