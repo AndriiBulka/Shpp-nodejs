@@ -1,0 +1,19 @@
+{
+  "name": "udp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf ./dist && tsc",
+    "start": "node dist/client.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "rimraf": "^4.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.13.0"
+  }
+}

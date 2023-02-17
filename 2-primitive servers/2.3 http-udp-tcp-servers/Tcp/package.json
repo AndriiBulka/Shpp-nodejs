@@ -1,0 +1,13 @@
+{
+  "name": "tcp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf ./dist && tsc",
+    "start": "node dist/client.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
