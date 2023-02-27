@@ -330,8 +330,7 @@ README:
             const route = this.apiVersion === "v1" ? "/items" : "/router"
             const qs = { action: this.apiVersion === "v1" ? "" : "getItems" }
             fetch(this.apiURL + this.apiVersion + route + this.backendSuffix + "?" + new URLSearchParams(qs), {
-              mode: "no-cors",
-              credentials: "include",
+              // credentials: "include",
               method: this.apiVersion === "v1" ? "GET" : "POST",
             })
               .then(res => res.json())

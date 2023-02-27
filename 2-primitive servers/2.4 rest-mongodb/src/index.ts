@@ -1,52 +1,45 @@
 import express from "express"
+import { Todo, readData, writeData, createID, ID, Todos } from "./database/dbController"
 
 const PORT = 3005
 const HOST = "123.0.0.1"
-
-let ID = 3
-let db = {
-  items: [
-    { id: 1, text: "text 22", checked: false },
-    { id: 2, text: "text 23", checked: false },
-    { id: 3, text: "text 24", checked: false },
-  ],
-}
 
 const app = express()
 app.use(express.json())
 app.use(express.static("static"))
 
-//end points
+let todos: Todos = readData()
+//Endpoints
 app.get("/api/v1/items", (req, res) => {
-  console.log("here")
-
-  res.json(db)
+  res.json(todos)
 })
 
 app.post("/api/v1/items", (req, res) => {
   const { text } = req.body
-  const id = ++ID
-  const item = {
-    id,
+  const ID: ID = createID()
+  const item: Todo = {
+    id: ID.id,
     text,
     checked: false,
   }
-  db.items.push(item)
-  res.status(201).json(id)
+  todos.items.push(item)
+  writeData(todos)
+  res.json(ID)
 })
 
 app.put("/api/v1/items", (req, res) => {
   const { id, text, checked } = req.body
-  const itemIndex = db.items.findIndex(item => item.id === id)
-  db.items[itemIndex].text = text
-  db.items[itemIndex].checked = checked
-
+  const itemIndex = todos.items.findIndex(item => item.id === id)
+  todos.items[itemIndex].text = text
+  todos.items[itemIndex].checked = checked
+  writeData(todos)
   res.json({ ok: true })
 })
 
 app.delete("/api/v1/items", (req, res) => {
   const { id } = req.body
-  db.items = db.items.filter(item => item.id !== id)
+  todos.items = todos.items.filter(item => item.id !== id)
+  writeData(todos)
   res.json({ ok: true })
 })
 
