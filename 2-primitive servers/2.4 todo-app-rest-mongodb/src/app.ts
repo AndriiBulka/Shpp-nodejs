@@ -22,17 +22,17 @@ app.use(
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
-//serve static front in Express
-// app.use(express.static("./public"))
+// serve static front in Express
+app.use(express.static("./public"))
 
 // To use CORS modul need read README in "public/index.html"
-app.use(
-  cors({
-    origin: ["http://localhost:8080"],
-    methods: ["GET", "POST", "DELETE", "PUT"],
-    credentials: true,
-  })
-)
+// app.use(
+//   cors({
+//     origin: ["http://localhost:8080"],
+//     methods: ["GET", "POST", "DELETE", "PUT"],
+//     credentials: true,
+//   })
+// )
 app.use("/", route_v1)
 app.use("/", route_v2)
 
