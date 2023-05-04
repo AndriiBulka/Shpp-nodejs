@@ -1,0 +1,21 @@
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid"><a class="nav-link text-light " href="/admin-panel">
+            <span class="navbar-brand mb-0 h1">Library ++</span></a>
+        <form id="search-form" class="d-flex" role="search">
+            <input id="search-input" class="form-control me-2" type="search" placeholder="Search..."
+                   aria-label="Search">
+
+            <button class="btn btn-outline-success fa-align-center" type="submit">Search</button>
+            <script>
+                const searchForm = document.getElementById('search-form');
+                searchForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    const input = document.getElementById('search-input').value;
+                    window.location.href = `http://localhost:3000/admin-panel/search?search=${input}`;
+
+                });
+            </script>
+        </form>
+        <a type="button" class="btn btn-danger " href="http://localhost:3000/admin-panel/logout">Logout</a>
+    </div>
+</nav>

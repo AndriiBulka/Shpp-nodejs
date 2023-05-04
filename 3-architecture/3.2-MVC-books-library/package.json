@@ -1,0 +1,44 @@
+{
+  "name": "3.2-mvc-books-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "copysql": "copyfiles ./src/models/sql_files/* ./dist",
+    "copy": "copyfiles ./views/**/* ./dist",
+    "clean": "rimraf ./dist",
+    "buildq": "npm run clean && npm run copy && npm run copysql && tsc -w ",
+    "build": "npm run clean && tsc -w ",
+    "dev": "nodemon ./dist/index.js",
+    "db": "ts-node ./src/models/utils/database.ts ",
+    "db:init": " npm run db init_db",
+    "db:migrate": "npm run db migration"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "@types/basic-auth": "^1.1.3",
+    "@types/ejs": "^3.1.2",
+    "@types/express": "^4.17.17",
+    "@types/multer": "^1.4.7",
+    "@types/node": "^18.15.13",
+    "@types/node-cron": "^3.0.7",
+    "basic-auth": "^2.0.1",
+    "copyfiles": "^2.4.1",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.2.0",
+    "mysqldump": "^3.2.0",
+    "node-cron": "^3.0.2",
+    "rimraf": "^4.4.1",
+    "ts-node": "^10.9.1"
+  }
+}
