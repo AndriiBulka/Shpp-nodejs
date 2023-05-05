@@ -22,3 +22,11 @@ npm run db:init
 npm run db:migrate
 
 ```
+4.Запустіть build  і для запуску на локальному хості запустіть dev 
+```
+npm run build
+npm run dev
+
+```
+http://localhost:3000/ - головна сторінка 
+http://localhost:3000/admin-panel - сторінка адмінки
