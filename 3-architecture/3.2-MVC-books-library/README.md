@@ -29,4 +29,5 @@ npm run dev
 
 ```
 http://localhost:3000/ - головна сторінка 
+
 http://localhost:3000/admin-panel - сторінка адмінки
