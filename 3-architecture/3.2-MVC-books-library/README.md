@@ -28,6 +28,6 @@ npm run build
 npm run dev
 
 ```
-http://localhost:3000/ - головна сторінка 
+http://localhost:ваш-порт/ - головна сторінка 
 
-http://localhost:3000/admin-panel - сторінка адмінки
+http://localhost:ваш-порт/admin-panel - сторінка адмінки
