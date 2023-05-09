@@ -11,7 +11,7 @@
 ```
 npm install
 ```
-3.Створіть файл .env та заповніть змінні середовища своїми значеннями
+3.Створіть файл .env та заповніть змінні середовища своїми значеннями SERVER_PORT = 3000
 ```
 cp .env.example .env
 ```
@@ -28,6 +28,6 @@ npm run build
 npm run dev
 
 ```
-http://localhost:ваш-порт/ - головна сторінка 
+http://localhost:3000/ - головна сторінка 
 
-http://localhost:ваш-порт/admin-panel - сторінка адмінки
+http://localhost:3000/admin-panel - сторінка адмінки
